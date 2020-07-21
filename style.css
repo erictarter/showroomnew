@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  position: relative;
+}
+
+.divider {
+  border-top: 1px solid #000;
+  width: 80%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.icon {
+  font-size: 3.5rem;
+}
+.icon-md {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.icon-sm {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.price-item {
+  padding: 2rem;
+  text-align: center;
+  border: 2px black solid;
+  margin-bottom: 1rem;
+  width: 14rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.price-item:hover {
+  color: #fff;
+  background: #000;
+  transition: 0.4s all ease;
+}
+
+.price-popup {
+  position: fixed;
+  top: 50%;
+  margin-left: 27.5%;
+  transform: translateY(-50%);
+  width: 30rem;
+  height: 20rem;
+  /* border: 2px rgb(0, 0, 0) solid; */
+  border-radius: 5px;
+  z-index: 100;
+  background: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  display: none;
+}
+
+.form-popup {
+  position: fixed;
+  top: 50%;
+  margin-left: 27.5%;
+  transform: translateY(-50%);
+  width: 30rem;
+  height: 20rem;
+  /* border: 2px rgb(0, 0, 0) solid; */
+  border-radius: 5px;
+  z-index: 100;
+  background: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  display: none;
+}
+
+.scroll-up {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  font-size: 2rem;
+  transform: translate(-50%);
+}
+
+.scroll-up:hover {
+  transition: all 0.2s ease;
+}
+
+.up-arrow {
+  color: #a09e9e;
+}
+
+/* body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  z-index: 1;
+} */
+
+.navbar {
+  background: #363535;
+  width: 100%;
+  height: 3.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hamburger {
+  color: #fff;
+  font-size: 1.7rem;
+  cursor: pointer;
+  padding-left: 3.5rem;
+  z-index: 1;
+}
+
+.social {
+  padding-right: 3.5rem;
+}
+
+.social2 a {
+  color: #fff;
+  font-size: 1.7rem;
+  padding: 0.3rem;
+}
+
+.social a {
+  color: #fff;
+  font-size: 1.7rem;
+  padding: 0.3rem;
+}
+
+.social a:hover {
+  color: rgb(104, 104, 250);
+  transition: color 0.3s ease;
+}
+
+.social2 a:hover {
+  color: rgb(104, 104, 250);
+  transition: color 0.3s ease;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.menu a {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  padding-left: 0.5rem;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(126, 124, 124);
+  font-size: 1.4rem;
+  color: #fff;
+  background: #363535;
+  padding-left: 3.5rem;
+}
+.menu a:hover {
+  background: #525151;
+}
+
+.exit-menu {
+  font-size: 2rem;
+  /* border-color: #363535 !important; */
+}
+.exit-menu:hover {
+  background: #363535 !important;
+}
+
+.bg {
+  background: rgba(0, 0, 0, 1);
+  width: 100%;
+}
+
+.jumbotron {
+  background: url('https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2300&q=80')
+    no-repeat center/cover;
+  width: 80%;
+  height: 22rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border: 2rem solid transparent;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  color: rgb(189, 186, 186);
+  font-size: 2.6rem;
+}
+.logo2 {
+  position: absolute;
+  top: 2.7rem;
+  left: 2rem;
+  color: rgb(189, 186, 186);
+  font-size: 2rem;
+}
+
+.logo2.hide {
+  transition: all 2s ease;
+  opacity: 0;
+}
+
+.logo2.show {
+  transition: all 2s ease;
+  opacity: 1;
+}
+.main {
+  background: #fff;
+  /* background: rgba(249, 249, 249, 0.5); */
+  width: 90%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+.about {
+  /* text-align: center; */
+  padding: 2rem;
+  width: 80%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.about p {
+  font-size: 1.4rem;
+}
+.about h1 {
+  font-size: 2.9rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-title {
+  margin-left: 11%;
+  font-size: 3rem;
+}
+
+.prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  margin-top: 4rem;
+}
+.prices h2 {
+  margin-bottom: 1rem;
+}
+
+.app {
+  margin-top: 4rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 4rem;
+}
+
+.schedule-app {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  padding: 0.7rem 2rem;
+  color: #fff;
+  background: rgb(104, 104, 250);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.schedule-app:hover {
+  background: rgb(50, 50, 172);
+  transition: 0.2s all ease;
+}
+
+.number {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+.gallery {
+  padding-bottom: 3rem;
+  text-align: center;
+}
+.gallery-btn {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  padding: 0.7rem 2rem;
+  color: #fff;
+  background: rgb(53, 53, 53);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.gallery-btn:hover {
+  transition: 0.2s all ease;
+  background: rgb(34, 34, 34);
+}
+
+.footer {
+  width: 100%;
+  height: 5rem;
+  background: #000;
+  color: #fff;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer h4 {
+  margin-top: 1rem;
+}
+
+#exit-popup {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+#exit-form-popup {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+.item-title {
+  font-size: 2rem;
+}
+.item-price {
+  font-size: 1.6rem;
+}
+.item-desc {
+  font-size: 1.4rem;
+  margin-top: 1.8rem;
+}
+
+.app-form {
+  margin-top: 3rem;
+}
+input.name {
+  padding: 0.4rem;
+  font-size: 1.4rem;
+  width: 15rem;
+}
+input.phone {
+  padding: 0.4rem;
+  font-size: 1.4rem;
+  width: 15rem;
+  margin-top: 1rem;
+}
+input.submit-info {
+  width: 16.1rem;
+  font-size: 1.4rem;
+  padding: 0.4rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: #fff;
+  background: rgb(74, 126, 74);
+  border: none;
+  border-radius: 5px;
+}
+input.submit-info:hover {
+  transition: all 0.3s ease;
+  background: rgb(111, 199, 111);
+}
+
+.form-popup h2 {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 800px) {
+  .price-item {
+    width: 8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .app {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 4rem;
+  }
+  .contact {
+    margin-top: 4rem;
+  }
+  .pricing-title {
+    text-align: center;
+    margin-left: 0;
+  }
+  .about h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .prices {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* add popup modals for prices */
+/* add popup modals for appointment form */
+/* add smooth scrolling */
+/* add correct links */
