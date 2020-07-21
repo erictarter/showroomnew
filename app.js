@@ -30,6 +30,8 @@ exitPopup.addEventListener('click', exitModal);
 exitFormPopup.addEventListener('click', exitFormModal);
 scheduleApp.addEventListener('click', openFormModal);
 submitInfo.addEventListener('click', sendInfo);
+name.addEventListener('keyup', nameChange);
+phone.addEventListener('keyup', phoneChange);
 
 priceItem.forEach(i => {
   i.addEventListener('click', pricePopup);
@@ -89,6 +91,14 @@ function openFormModal() {
 function exitFormModal() {
   formPopup.style.display = 'none';
   main.style.backgroundColor = '#FFF';
+}
+
+function nameChange(e) {
+  name.name = e.target.value;
+}
+
+function phoneChange(e) {
+  phone.name = e.target.value;
 }
 
 function sendInfo() {
