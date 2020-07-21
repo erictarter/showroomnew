@@ -20,9 +20,6 @@ const name = document.getElementById('name');
 const phone = document.getElementById('phone');
 const submitInfo = document.getElementById('submit-info');
 
-name.addEventListener('keyup', e => console.log(e.target.value));
-phone.addEventListener('keyup', e => console.log(e.target.value));
-
 hamburger.addEventListener('click', toggleMenu);
 exitMenu.addEventListener('click', toggleExit);
 aboutLink.addEventListener('click', toggleExit);
