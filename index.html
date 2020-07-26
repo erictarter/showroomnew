@@ -18,54 +18,89 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="price-popup">
-      <div id="exit-popup">
-        <i class="fas fa-times icon-md"></i>
+    <div class="popup-container">
+      <div class="price-popup">
+        <div id="exit-popup">
+          <i class="fas fa-times icon-md"></i>
+        </div>
+        <div class="item-title" id="item-title">Dynamic Title</div>
+        <div class="item-price" id="item-price">Item Price</div>
+        <div class="item-desc" id="item-desc">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          minima illo possimus, quaerat deserunt alias dolorem amet, cupiditate
+          quae numquam, magni magnam ullam quo! Amet.
+        </div>
       </div>
-      <div class="item-title" id="item-title">Dynamic Title</div>
-      <div class="item-price" id="item-price">Item Price</div>
-      <div class="item-desc" id="item-desc">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-        minima illo possimus, quaerat deserunt alias dolorem amet, cupiditate
-        quae numquam, magni magnam ullam quo! Amet.
+      <div class="form-popup">
+        <div id="exit-form-popup">
+          <i class="fas fa-times icon-md"></i>
+        </div>
+        <h2>
+          Send us your name and phone number and we will contact you soon!
+        </h2>
+        <form
+          action=""
+          method="POST"
+          data-netlify="true"
+          class="app-form"
+          name="info"
+        >
+          <input
+            type="text"
+            class="name"
+            id="name"
+            name=""
+            placeholder="enter name"
+            value=""
+          />
+          <input
+            type="text"
+            class="phone"
+            id="phone"
+            name=""
+            placeholder="enter phone number"
+            value=""
+          />
+          <br />
+          <input
+            type="submit"
+            class="submit-info"
+            id="submit-info"
+            value="Send"
+          />
+        </form>
       </div>
-    </div>
-    <div class="form-popup">
-      <div id="exit-form-popup">
-        <i class="fas fa-times icon-md"></i>
+      <div class="carousel-container">
+        <div id="exit-carousel-popup">
+          <i class="fas fa-times close-car-i"></i>
+        </div>
+        <div id="previous-slide">
+          <i class="fas fa-arrow-left previous-slide"></i>
+        </div>
+        <div id="next-slide">
+          <i class="fas fa-arrow-right next-slide"></i>
+        </div>
+        <div class="carousel-slide">
+          <img
+            id="img-1"
+            class="active"
+            src="./car-img/photo-1589750602846-60028879da9b.jpeg"
+            alt=""
+          />
+          <img
+            id="img-2"
+            class="inactive"
+            src="./car-img/photo-1541443131876-44b03de101c5.jpeg"
+            alt=""
+          />
+          <img
+            id="img-3"
+            class="inactive"
+            src="./car-img/photo-1502877338535-766e1452684a.jpeg"
+            alt=""
+          />
+        </div>
       </div>
-      <h2>Send Us your name and phone number and we will contact you soon!</h2>
-      <form
-        action=""
-        method="POST"
-        data-netlify="true"
-        class="app-form"
-        name="info"
-      >
-        <input
-          type="text"
-          class="name"
-          id="name"
-          name=""
-          placeholder="enter name"
-          value=""
-        />
-        <input
-          type="text"
-          class="phone"
-          id="phone"
-          name=""
-          placeholder="enter phone number"
-          value=""
-        />
-        <br />
-        <input
-          type="submit"
-          class="submit-info"
-          id="submit-info"
-          value="Send"
-        />
-      </form>
     </div>
     <div class="navbar" id="nav">
       <div class="hamburger">

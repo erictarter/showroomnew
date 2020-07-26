@@ -4,9 +4,11 @@ const aboutLink = document.querySelector('.about-link');
 const priceLink = document.querySelector('.prices-link');
 const appLink = document.querySelector('.app-link');
 const galleryLink = document.querySelector('.gallery-link');
+const galleryBtn = document.querySelector('.gallery-btn');
 const exitMenu = document.querySelector('.exit-menu');
 const exitPopup = document.getElementById('exit-popup');
 const exitFormPopup = document.getElementById('exit-form-popup');
+const exitCarouselPopup = document.getElementById('exit-carousel-popup');
 const logo2 = document.querySelector('.logo2');
 const priceItem = document.querySelectorAll('.price-item');
 const main = document.querySelector('.main');
@@ -19,6 +21,17 @@ const formPopup = document.querySelector('.form-popup');
 const name = document.getElementById('name');
 const phone = document.getElementById('phone');
 const submitInfo = document.getElementById('submit-info');
+const carouselContainer = document.querySelector('.carousel-container');
+const nextSlide = document.getElementById('next-slide');
+const previousSlide = document.getElementById('previous-slide');
+
+const images = [
+  document.getElementById('img-1'),
+  document.getElementById('img-2'),
+  document.getElementById('img-3')
+];
+
+let imageNum = 0;
 
 hamburger.addEventListener('click', toggleMenu);
 exitMenu.addEventListener('click', toggleExit);
@@ -26,12 +39,16 @@ aboutLink.addEventListener('click', toggleExit);
 priceLink.addEventListener('click', toggleExit);
 appLink.addEventListener('click', toggleExit);
 galleryLink.addEventListener('click', toggleExit);
+galleryBtn.addEventListener('click', openCarousel);
 exitPopup.addEventListener('click', exitModal);
 exitFormPopup.addEventListener('click', exitFormModal);
+exitCarouselPopup.addEventListener('click', exitCarousel);
 scheduleApp.addEventListener('click', openFormModal);
 submitInfo.addEventListener('click', sendInfo);
 name.addEventListener('keyup', nameChange);
 phone.addEventListener('keyup', phoneChange);
+nextSlide.addEventListener('click', nextImg);
+previousSlide.addEventListener('click', previousImg);
 
 priceItem.forEach(i => {
   i.addEventListener('click', pricePopup);
@@ -40,6 +57,9 @@ priceItem.forEach(i => {
 function pricePopup(e) {
   priceModal.style.display = 'block';
   main.style.backgroundColor = 'rgba(249, 249, 249, 0.5)';
+  galleryBtn.classList.add('dis');
+  scheduleApp.classList.add('dis');
+  priceItem.forEach(i => i.classList.add('dis'));
   if (e.target.id === 'full') {
     itemTitle.innerText = 'Complete Touch Up';
     itemPrice.innerText = 'Price - $85';
@@ -69,6 +89,9 @@ function pricePopup(e) {
 function exitModal() {
   priceModal.style.display = 'none';
   main.style.backgroundColor = '#FFF';
+  galleryBtn.classList.remove('dis');
+  scheduleApp.classList.remove('dis');
+  priceItem.forEach(i => i.classList.remove('dis'));
 }
 
 function toggleMenu(e) {
@@ -86,11 +109,64 @@ function toggleExit(e) {
 function openFormModal() {
   formPopup.style.display = 'block';
   main.style.backgroundColor = 'rgba(249, 249, 249, 0.5)';
+  priceItem.forEach(i => i.classList.add('dis'));
+  galleryBtn.classList.add('dis');
 }
 
 function exitFormModal() {
   formPopup.style.display = 'none';
   main.style.backgroundColor = '#FFF';
+  priceItem.forEach(i => i.classList.remove('dis'));
+  galleryBtn.classList.remove('dis');
+}
+
+function openCarousel() {
+  carouselContainer.style.display = 'block';
+  main.style.backgroundColor = 'rgba(249, 249, 249, 0.5)';
+  priceItem.forEach(i => i.classList.add('dis'));
+  scheduleApp.classList.add('dis');
+}
+
+function exitCarousel() {
+  carouselContainer.style.display = 'none';
+  main.style.backgroundColor = '#FFF';
+  priceItem.forEach(i => i.classList.remove('dis'));
+  scheduleApp.classList.remove('dis');
+}
+
+function nextImg() {
+  if (imageNum < images.length - 1) {
+    imageNum++;
+  } else {
+    imageNum = 0;
+  }
+  images.map((i, index) => {
+    if (index === imageNum) {
+      i.classList.add('active');
+      i.classList.remove('inactive');
+    } else {
+      i.classList.remove('active');
+      i.classList.add('inactive');
+    }
+  });
+}
+
+function previousImg() {
+  if (imageNum > 0) {
+    imageNum--;
+  } else {
+    imageNum = images.length - 1;
+  }
+  console.log(imageNum);
+  images.map((i, index) => {
+    if (index === imageNum) {
+      i.classList.add('active');
+      i.classList.remove('inactive');
+    } else {
+      i.classList.remove('active');
+      i.classList.add('inactive');
+    }
+  });
 }
 
 function nameChange(e) {
