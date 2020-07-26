@@ -511,7 +511,7 @@ input.submit-info:hover {
     grid-template-columns: 1fr;
   }
   .price-item {
-    width: 90%;
+    width: 80%;
   }
   .carousel-container {
     width: 80%;
