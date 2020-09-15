@@ -27,8 +27,7 @@ const previousSlide = document.getElementById('previous-slide');
 
 const images = [
   document.getElementById('img-1'),
-  document.getElementById('img-2'),
-  document.getElementById('img-3')
+  document.getElementById('img-2')
 ];
 
 let imageNum = 0;
@@ -64,13 +63,13 @@ function pricePopup(e) {
     itemTitle.innerText = 'Complete Touch Up';
     itemPrice.innerText = 'Price - $85';
     itemDesc.innerText =
-      'Complete Touch Up is the best way to go if there is rock chip damage around the whole car. We will go around the entire car filling in every rock chip.';
+      'For $85, We will go around the entire car filling in every rock chip.';
   }
   if (e.target.id === 'front') {
     itemTitle.innerText = 'Front Touch Up';
     itemPrice.innerText = 'Price - $65';
     itemDesc.innerText =
-      'Front touch up includes our process on the front bumper, hood to the windshield pillers and mirrors. A good option if all of the concerning damage is on the front of the car.';
+      'Front touch up includes our process on the front bumper, hood to the windshield pillers and mirrors.';
   }
   if (e.target.id === 'spot') {
     itemTitle.innerText = 'Spot Touch Up';
@@ -82,7 +81,7 @@ function pricePopup(e) {
     itemTitle.innerText = 'Complete Touch Up (Truck)';
     itemPrice.innerText = 'Price - $125';
     itemDesc.innerText =
-      'For Complete Touch up on Trucks we charge a little bit more. Typically trucks have more damage, therefor takes longer for our process';
+      'For $125, we offer our Complete Touch up process on a trucks and large vans';
   }
 }
 

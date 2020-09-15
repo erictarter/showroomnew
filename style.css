@@ -46,7 +46,7 @@
 .price-item:hover {
   color: #fff;
   background: #000;
-  transition: 0.4s all ease;
+  transition: 0.2s all ease;
 }
 
 .popup-container {
